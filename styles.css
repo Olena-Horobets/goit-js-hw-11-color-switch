@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+}
+
+.color-switcher {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.spiral-box {
+  height: 230vh;
+  width: 230vw;
+  position: absolute;
+  opacity: 0;
+  overflow: hidden;
+
+  background-image: url("./images/spiral.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  transition: opacity 150ms ease-out;
+}
+
+.animate {
+  animation-name: spiral;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  transition: opacity 150ms ease-out 1000ms;
+  opacity: 1;
+}
+
+[type="button"] {
+  font-size: 32px;
+  padding: 10px 20px;
+  margin: 20px;
+  border-radius: 12px;
+  font-weight: 600;
+  color: #2e2e2e;
+  border: 3px solid #2e2e2e;
+
+  transform: scale(1);
+  transition: transform 150ms ease-out;
+}
+
+[type="button"]:active {
+  transform: scale(0.9);
+}
+
+@keyframes spiral {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
