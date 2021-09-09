@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  overflow: hidden;
 }
 
 .color-switcher {
@@ -14,7 +15,6 @@ body {
   width: 230vw;
   position: absolute;
   opacity: 0;
-  overflow: hidden;
 
   background-image: url("./images/spiral.svg");
   background-repeat: no-repeat;
